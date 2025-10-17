@@ -1,0 +1,24 @@
+---
+import Frame from "../layouts/frame.astro";
+import Features from "../components/Features.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<Frame classes='flex-col'>
+	<section class="min-h-screen flex flex-col items-center justify-center px-8 bg-gradient-to-br from-stone to-night text-white">
+		<div class="max-w-4xl mx-auto text-center">
+			<h1 class="text-5xl md:text-6xl font-light tracking-wide mb-6">Découvrir nos solutions</h1>
+			<p class="text-xl opacity-90 max-w-2xl mx-auto">Explorez nos outils et services pour une action collective efficace contre la pollution de l'air.</p>
+		</div>
+	</section>
+	<Features />
+	<CTA />
+</Frame>
+
+<script>
+	import { animate } from "motion";
+	document.addEventListener('DOMContentLoaded', () => {
+		animate('h1', { opacity: [0, 1] }, { duration: 1.5, delay: 0.5 });
+		animate('p', { opacity: [0, 1] }, { duration: 1.5, delay: 1 });
+	});
+</script>
