@@ -1,24 +1,89 @@
 ---
 import Frame from "../layouts/frame.astro";
-import Features from "../components/Features.astro";
-import CTA from "../components/CTA.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <Frame classes='flex-col'>
-	<section class="min-h-screen flex flex-col items-center justify-center px-8 bg-gradient-to-br from-stone to-night text-white">
-		<div class="max-w-4xl mx-auto text-center">
-			<h1 class="text-5xl md:text-6xl font-light tracking-wide mb-6">Découvrir nos solutions</h1>
-			<p class="text-xl opacity-90 max-w-2xl mx-auto">Explorez nos outils et services pour une action collective efficace contre la pollution de l'air.</p>
+	<Nav />
+	<section class="py-24 px-8 bg-white">
+		<div class="max-w-5xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-bold text-night mb-6 text-center">Notre mission</h2>
+			<p class="text-xl text-night/80 leading-relaxed text-center max-w-3xl mx-auto mb-16">
+				<strong class="text-olive">ECollAct</strong> est né d'une conviction simple : l'action collective
+				est la clé pour améliorer durablement la qualité de l'air que nous respirons. Nous croyons que
+				chaque citoyen, entreprise et collectivité a un rôle à jouer dans cette transformation.
+			</p>
+
+			<div class="mb-16 bg-stone/30 p-8 rounded-2xl">
+				<h3 class="text-3xl font-bold text-night mb-4">Le défi</h3>
+				<p class="text-lg text-night/80 leading-relaxed mb-4">
+					La pollution de l'air est l'un des plus grands défis environnementaux de notre époque.
+					Elle affecte la santé de millions de personnes, contribue au changement climatique et dégrade
+					nos écosystèmes urbains.
+				</p>
+				<p class="text-lg text-night/80 leading-relaxed">
+					Mais pour agir efficacement, nous devons d'abord comprendre : où se concentre la pollution ?
+					Quand les niveaux sont-ils les plus élevés ? Quelles actions ont un impact réel ?
+				</p>
+			</div>
+
+			<div class="mb-16">
+				<h3 class="text-3xl font-bold text-night mb-6">Notre solution</h3>
+				<div class="grid md:grid-cols-2 gap-8">
+					<div class="bg-gradient-to-br from-blue/10 to-blue/5 p-6 rounded-xl border border-blue/20">
+						<h4 class="text-xl font-bold text-night mb-4">Surveillance en temps réel</h4>
+						<p class="text-night/70 leading-relaxed">
+							Notre réseau de capteurs connectés mesure en continu la qualité de l'air : particules fines,
+							ozone, dioxyde d'azote, et autres polluants. Des données précises, accessibles à tous.
+						</p>
+					</div>
+
+					<div class="bg-gradient-to-br from-orange/10 to-orange/5 p-6 rounded-xl border border-orange/20">
+						<h4 class="text-xl font-bold text-night mb-4">Analyse intelligente</h4>
+						<p class="text-night/70 leading-relaxed">
+							Nos algorithmes transforment les données brutes en insights actionnables : tendances,
+							prévisions, et recommandations personnalisées pour réduire votre exposition.
+						</p>
+					</div>
+
+					<div class="bg-gradient-to-br from-olive/10 to-olive/5 p-6 rounded-xl border border-olive/20">
+						<h4 class="text-xl font-bold text-night mb-4">Action communautaire</h4>
+						<p class="text-night/70 leading-relaxed">
+							Ensemble, nous sommes plus forts. Partagez vos données, comparez avec votre quartier,
+							et participez à des actions collectives pour un air plus pur.
+						</p>
+					</div>
+
+					<div class="bg-gradient-to-br from-night/10 to-night/5 p-6 rounded-xl border border-night/20">
+						<h4 class="text-xl font-bold text-night mb-4">Impact mesurable</h4>
+						<p class="text-night/70 leading-relaxed">
+							Visualisez l'impact de vos actions et de celles de votre communauté. Chaque geste compte,
+							et nous vous aidons à voir la différence concrète que vous faites.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center bg-gradient-to-br from-olive/5 to-blue/5 p-12 rounded-2xl border border-olive/20">
+				<h3 class="text-3xl font-bold text-night mb-6">Notre impact</h3>
+				<div class="grid md:grid-cols-3 gap-8 mb-6">
+					<div>
+						<div class="text-4xl font-bold text-blue mb-2">1000+</div>
+						<div class="text-night/70">Capteurs actifs dans nos villes partenaires</div>
+					</div>
+					<div>
+						<div class="text-4xl font-bold text-orange mb-2">50</div>
+						<div class="text-night/70">Villes qui nous font confiance</div>
+					</div>
+					<div>
+						<div class="text-4xl font-bold text-olive mb-2">95%</div>
+						<div class="text-night/70">Taux de satisfaction utilisateurs</div>
+					</div>
+				</div>
+				<p class="text-lg text-night/80 max-w-2xl mx-auto">
+					Rejoignez les milliers de citoyens et dizaines de collectivités qui agissent déjà pour un air plus pur.
+				</p>
+			</div>
 		</div>
 	</section>
-	<Features />
-	<CTA />
 </Frame>
-
-<script>
-	import { animate } from "motion";
-	document.addEventListener('DOMContentLoaded', () => {
-		animate('h1', { opacity: [0, 1] }, { duration: 1.5, delay: 0.5 });
-		animate('p', { opacity: [0, 1] }, { duration: 1.5, delay: 1 });
-	});
-</script>
