@@ -1,0 +1,17 @@
+ ---
+import Frame from "../layouts/frame.astro";
+import Hero from "../components/Hero.astro";
+import Stats from "../components/Stats.astro";
+import Features from "../components/Features.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<Frame classes='flex-col'>
+  <Hero>
+    <Stats slot="stats" />
+  </Hero>
+
+  <Features />
+
+  <CTA />
+</Frame>

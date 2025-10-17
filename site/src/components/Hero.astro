@@ -1,0 +1,55 @@
+---
+// Hero component for the main landing section
+---
+
+<section class="min-h-screen flex flex-col items-center justify-center px-8 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-20 left-20 w-32 h-32 bg-[var(--color-olive)] rounded-full blur-xl"></div>
+    <div class="absolute bottom-20 right-20 w-40 h-40 bg-[var(--color-blue)] rounded-full blur-xl"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[var(--color-orange)] rounded-full blur-2xl"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto text-center relative z-10">
+    <div class="mb-8">
+      <span class="inline-block px-4 py-2 bg-[var(--color-olive)]/10 text-[var(--color-olive)] rounded-full text-sm font-medium mb-4">
+        🌱 Action collective pour l'environnement
+      </span>
+    </div>
+
+    <h1 class="text-7xl md:text-8xl font-bold text-[var(--color-night)] mb-6 animate-fade-in leading-tight">
+      EColl<span class="text-[var(--color-olive)]">Act</span>
+    </h1>
+
+    <p class="text-2xl md:text-3xl text-[var(--color-night)]/80 mb-12 font-light animate-fade-in-delay max-w-3xl mx-auto leading-relaxed">
+      L'action collective pour un air plus clair.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+      <button class="px-10 py-4 bg-[var(--color-olive)] text-white rounded-xl hover:bg-[var(--color-olive)]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+        Découvrir nos solutions
+      </button>
+      <button class="px-10 py-4 border-2 border-[var(--color-night)] text-[var(--color-night)] rounded-xl hover:bg-[var(--color-night)] hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer">
+        En savoir plus
+      </button>
+    </div>
+
+    <!-- Stats Component -->
+    <slot name="stats" />
+  </div>
+</section>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 1s ease-in-out 0.5s both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
