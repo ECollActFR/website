@@ -2,12 +2,12 @@
 const { id } = Astro.props;
 ---
 
-<nav id='nav' class="bg-white shadow-md p-4 top-0 z-50 transition-transform duration-300">
+<nav id='nav' class="bg-white shadow-md p-4 top-0 z-50 transition-transform duration-300" aria-label="Navigation principale">
   <div class="max-w-6xl mx-auto flex justify-between items-center">
-    <a href="/" class="text-night font-bold text-xl">EColl<span class="text-olive">Act</span></a>
-    <div class="space-x-4">
-      <a href="/" class="text-night hover:text-olive transition-colors">Accueil</a>
-      <a href="/discover" class="text-night hover:text-olive transition-colors">Découvrir</a>
+    <a href="/" class="text-night font-bold text-xl" aria-label="Retour à l'accueil ECollAct">EColl<span class="text-olive">Act</span></a>
+    <div class="space-x-4" role="menubar">
+      <a href="/" class="text-night hover:text-olive transition-colors" role="menuitem">Accueil</a>
+      <a href="/discover" class="text-night hover:text-olive transition-colors" role="menuitem">Découvrir</a>
     </div>
   </div>
 </nav>

@@ -19,25 +19,4 @@ import CTA from "../components/CTA.astro";
 </Frame>
 
 <script>
-  const nav = document.getElementById('nav');
-  const heroSection = document.getElementById('heroSection');
-
-  if (nav && heroSection) {
-    const heroHeight = heroSection.offsetHeight;
-
-    // Set fixed positioning always
-    nav.classList.add('fixed', 'top-0', 'w-full', 'z-50');
-    nav.style.transform = 'translateY(-100%)'; // Start hidden
-
-    const updateNav = () => {
-      if (window.scrollY > heroHeight) {
-        nav.style.transform = 'translateY(0)';
-      } else {
-        nav.style.transform = 'translateY(-100%)';
-      }
-    };
-
-    window.addEventListener('scroll', updateNav);
-    updateNav(); // Initial check
-  }
-</script>
+C</script>

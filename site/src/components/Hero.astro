@@ -3,7 +3,7 @@
 // Hero component for the main landing section
 ---
 
-<section id="heroSection" class="min-h-screen flex flex-col items-center justify-center px-8 relative overflow-hidden">
+<section id="heroSection" class="min-h-screen flex flex-col items-center justify-center px-8 relative overflow-hidden" aria-label="Section principale">
   <!-- Background Pattern -->
   <div class="absolute inset-0 opacity-5">
     <div class="absolute top-20 left-20 w-32 h-32 bg-[var(--color-olive)] rounded-full blur-xl"></div>
@@ -27,10 +27,10 @@
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-      <a href="/discover" class="inline-block px-10 py-4 bg-[var(--color-olive)] text-white rounded-xl hover:bg-[var(--color-olive)]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+      <a href="/discover" class="inline-block px-10 py-4 bg-[var(--color-olive)] text-white rounded-xl hover:bg-[var(--color-olive)]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" aria-label="Découvrir nos solutions de surveillance de l'air">
         Découvrir nos solutions
       </a>
-      <button class="px-10 py-4 border-2 border-[var(--color-night)] text-[var(--color-night)] rounded-xl hover:bg-[var(--color-night)] hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer">
+      <button class="px-10 py-4 border-2 border-[var(--color-night)] text-[var(--color-night)] rounded-xl hover:bg-[var(--color-night)] hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer" aria-label="En savoir plus sur ECollAct">
         En savoir plus
       </button>
     </div>

@@ -3,19 +3,23 @@ import Frame from "../layouts/frame.astro";
 import Nav from "../components/Nav.astro";
 ---
 
-<Frame classes='flex-col'>
+<Frame
+	classes='flex-col'
+	title="Découvrir ECollAct - Notre mission pour la qualité de l'air"
+	description="Découvrez comment ECollAct révolutionne la surveillance de la qualité de l'air avec un réseau de capteurs connectés et une action collective pour un environnement plus sain."
+	keywords="mission ECollAct, surveillance qualité air, capteurs air, action collective, pollution air, données environnementales, air pur, impact mesurable">
 	<Nav />
-	<section class="py-24 px-8 bg-white">
+	<section class="py-24 px-8 bg-white" aria-label="Découvrir ECollAct">
 		<div class="max-w-5xl mx-auto">
-			<h2 class="text-4xl md:text-5xl font-bold text-night mb-6 text-center">Notre mission</h2>
+			<h1 class="text-4xl md:text-5xl font-bold text-night mb-6 text-center">Notre mission</h1>
 			<p class="text-xl text-night/80 leading-relaxed text-center max-w-3xl mx-auto mb-16">
 				<strong class="text-olive">ECollAct</strong> est né d'une conviction simple : l'action collective
 				est la clé pour améliorer durablement la qualité de l'air que nous respirons. Nous croyons que
 				chaque citoyen, entreprise et collectivité a un rôle à jouer dans cette transformation.
 			</p>
 
-			<div class="mb-16 bg-stone/30 p-8 rounded-2xl">
-				<h3 class="text-3xl font-bold text-night mb-4">Le défi</h3>
+			<div class="mb-16 bg-stone/30 p-8 rounded-2xl" role="article" aria-labelledby="challenge-heading">
+				<h2 class="text-3xl font-bold text-night mb-4" id="challenge-heading">Le défi</h2>
 				<p class="text-lg text-night/80 leading-relaxed mb-4">
 					La pollution de l'air est l'un des plus grands défis environnementaux de notre époque.
 					Elle affecte la santé de millions de personnes, contribue au changement climatique et dégrade
@@ -27,35 +31,35 @@ import Nav from "../components/Nav.astro";
 				</p>
 			</div>
 
-			<div class="mb-16">
-				<h3 class="text-3xl font-bold text-night mb-6">Notre solution</h3>
+			<div class="mb-16" role="article" aria-labelledby="solution-heading">
+				<h2 class="text-3xl font-bold text-night mb-6" id="solution-heading">Notre solution</h2>
 				<div class="grid md:grid-cols-2 gap-8">
-					<div class="bg-gradient-to-br from-blue/10 to-blue/5 p-6 rounded-xl border border-blue/20">
-						<h4 class="text-xl font-bold text-night mb-4">Surveillance en temps réel</h4>
+					<div class="bg-gradient-to-br from-blue/10 to-blue/5 p-6 rounded-xl border border-blue/20" role="article">
+						<h3 class="text-xl font-bold text-night mb-4">Surveillance en temps réel</h3>
 						<p class="text-night/70 leading-relaxed">
 							Notre réseau de capteurs connectés mesure en continu la qualité de l'air : particules fines,
 							ozone, dioxyde d'azote, et autres polluants. Des données précises, accessibles à tous.
 						</p>
 					</div>
 
-					<div class="bg-gradient-to-br from-orange/10 to-orange/5 p-6 rounded-xl border border-orange/20">
-						<h4 class="text-xl font-bold text-night mb-4">Analyse intelligente</h4>
+					<div class="bg-gradient-to-br from-orange/10 to-orange/5 p-6 rounded-xl border border-orange/20" role="article">
+						<h3 class="text-xl font-bold text-night mb-4">Analyse intelligente</h3>
 						<p class="text-night/70 leading-relaxed">
 							Nos algorithmes transforment les données brutes en insights actionnables : tendances,
 							prévisions, et recommandations personnalisées pour réduire votre exposition.
 						</p>
 					</div>
 
-					<div class="bg-gradient-to-br from-olive/10 to-olive/5 p-6 rounded-xl border border-olive/20">
-						<h4 class="text-xl font-bold text-night mb-4">Action communautaire</h4>
+					<div class="bg-gradient-to-br from-olive/10 to-olive/5 p-6 rounded-xl border border-olive/20" role="article">
+						<h3 class="text-xl font-bold text-night mb-4">Action communautaire</h3>
 						<p class="text-night/70 leading-relaxed">
 							Ensemble, nous sommes plus forts. Partagez vos données, comparez avec votre quartier,
 							et participez à des actions collectives pour un air plus pur.
 						</p>
 					</div>
 
-					<div class="bg-gradient-to-br from-night/10 to-night/5 p-6 rounded-xl border border-night/20">
-						<h4 class="text-xl font-bold text-night mb-4">Impact mesurable</h4>
+					<div class="bg-gradient-to-br from-night/10 to-night/5 p-6 rounded-xl border border-night/20" role="article">
+						<h3 class="text-xl font-bold text-night mb-4">Impact mesurable</h3>
 						<p class="text-night/70 leading-relaxed">
 							Visualisez l'impact de vos actions et de celles de votre communauté. Chaque geste compte,
 							et nous vous aidons à voir la différence concrète que vous faites.
@@ -64,8 +68,8 @@ import Nav from "../components/Nav.astro";
 				</div>
 			</div>
 
-			<div class="text-center bg-gradient-to-br from-olive/5 to-blue/5 p-12 rounded-2xl border border-olive/20">
-				<h3 class="text-3xl font-bold text-night mb-6">Notre impact</h3>
+			<div class="text-center bg-gradient-to-br from-olive/5 to-blue/5 p-12 rounded-2xl border border-olive/20" role="article" aria-labelledby="impact-heading">
+				<h2 class="text-3xl font-bold text-night mb-6" id="impact-heading">Notre impact</h2>
 				<div class="grid md:grid-cols-3 gap-8 mb-6">
 					<div>
 						<div class="text-4xl font-bold text-blue mb-2">1000+</div>

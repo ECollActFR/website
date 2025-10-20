@@ -1,20 +1,97 @@
 ---
-const websiteName = 'ECollAct';
 import '/public/css/layouts/frame.css';
 import '/src/styles/global.css';
-const { classes } = Astro.props;
+
+// SEO Configuration
+const {
+	classes,
+	title = 'ECollAct - Action collective pour la qualité de l\'air',
+	description = 'ECollAct : Surveillez, analysez et améliorez la qualité de l\'air avec notre solution de monitoring en temps réel. Action collective pour un environnement plus sain.',
+	keywords = 'qualité air, monitoring air, pollution, environnement, capteurs air, analyse qualité air, action collective, développement durable, air pur',
+	ogImage = '/favicon.svg',
+	canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+} = Astro.props;
+
+const siteName = 'ECollAct';
+const siteURL = Astro.site || 'https://ecollact.com';
 ---
 
-<html lang="en">
+<html lang="fr">
 	<head>
+		<!-- Essential Meta Tags -->
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https:/s h-/fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<title>{websiteName}</title>
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="ECollAct" />
+		<meta name="robots" content="index, follow" />
+		<meta name="language" content="French" />
+		<meta name="revisit-after" content="7 days" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- Open Graph / Facebook Meta Tags -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(ogImage, siteURL).href} />
+		<meta property="og:site_name" content={siteName} />
+		<meta property="og:locale" content="fr_FR" />
+
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL(ogImage, siteURL).href} />
+
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#6B7F39" />
+		<meta name="msapplication-TileColor" content="#6B7F39" />
+
+		<!-- Google Search Console Verification -->
+		<meta name="google-site-verification" content="7-G3SDmHGglkUPv8kYodlApL_9ETwfi8taIaCeZLAYk" />
+
+		<!-- Preconnect to External Resources -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+		<!-- Structured Data (JSON-LD) -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": siteName,
+			"url": siteURL,
+			"logo": new URL('/favicon.svg', siteURL).href,
+			"description": description,
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "FR"
+			},
+			"sameAs": []
+		})} />
+
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": siteName,
+			"url": siteURL,
+			"description": description,
+			"inLanguage": "fr-FR"
+		})} />
 	</head>
 	<body class={`flex w-screen h-screen overflow-x-hidden ${classes}`}>
         <slot />
